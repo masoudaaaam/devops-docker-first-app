@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  docker-build:
+  docker-build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,3 +18,12 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t my-first-docker-app .
+
+      - name: Run Docker container
+        run: docker run -d -p 8080:80 --name test-container my-first-docker-app
+
+      - name: Wait for container to start
+        run: sleep 5
+
+      - name: Test web application
+        run: curl -f http://localhost:8080
