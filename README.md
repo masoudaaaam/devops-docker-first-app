@@ -25,3 +25,7 @@ devops-docker-first-app/
 ├── index.html
 ├── Dockerfile
 └── README.md
+
+![Docker CI](https://github.com/masoudaaaam/devops-docker-first-app/actions/workflows/docker-ci.yml/badge.svg)
+
+# DevOps Docker First App
